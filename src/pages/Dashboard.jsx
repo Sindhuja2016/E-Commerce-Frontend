@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-import Sidebar from "../components/sidebar";
+import Sidebar from "../components/Sidebar";
 import CustomerCard from "../components/CustomerCard";
 import Navbar from "../components/Navbar";
 import {useEffect, useState} from "react";
