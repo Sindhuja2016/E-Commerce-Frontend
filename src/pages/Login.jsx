@@ -12,7 +12,7 @@ function Login() {
        e.preventDefault();
 
        try {
-       const response = await api.post("/api/auth/login", {email,password,});
+       const response = await api.post("/auth/login", {email,password,});
        console.log("Response:", response.data);
   
         localStorage.setItem("token", response.data.token);

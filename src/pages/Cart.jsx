@@ -15,7 +15,7 @@ function Cart() {
 
   const fetchCart = async () => {
     try {
-      const response = await api.get("/api/cart");
+      const response = await api.get("/cart");
        console.log("Cart Response:", response.data);
       setCartItems(response.data);
     } catch (error) {
@@ -25,7 +25,7 @@ function Cart() {
 
   const handleDelete = async (id) => {
     try {
-      await api.delete(`/api/cart/${id}`);
+      await api.delete(`/cart/${id}`);
 
       alert("Item removed from cart");
 
@@ -37,7 +37,7 @@ function Cart() {
 
   const handleCheckout = async () => {
     try {
-      const response = await api.post("/api/orders/checkout");
+      const response = await api.post("/orders/checkout");
 
       alert(response.data.message);
 
@@ -55,7 +55,7 @@ function Cart() {
   const handleUpdateQuantity = async (id, quantity) => {
   try {
 
-    await api.put(`/api/cart/${id}`, {
+    await api.put(`/cart/${id}`, {
       quantity
     });
 

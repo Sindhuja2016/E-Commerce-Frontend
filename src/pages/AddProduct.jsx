@@ -26,7 +26,7 @@ function AddProduct() {
     e.preventDefault();
 
     try {
-      const response = await api.post("/api/products/create", product);
+      const response = await api.post("/products/create", product);
 
       alert(response.data.message);
 

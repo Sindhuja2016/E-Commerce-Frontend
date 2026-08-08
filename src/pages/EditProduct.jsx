@@ -22,7 +22,7 @@ function EditProduct() {
 
   const fetchProduct = async () => {
     try {
-      const response = await api.get(`/api/products/${id}`);
+      const response = await api.get(`/products/${id}`);
       setProduct(response.data);
     } catch (error) {
       console.log(error);
@@ -40,7 +40,7 @@ function EditProduct() {
     e.preventDefault();
 
     try {
-      await api.put(`/api/products/${id}`, product);
+      await api.put(`/products/${id}`, product);
 
       alert("Product updated successfully");
 

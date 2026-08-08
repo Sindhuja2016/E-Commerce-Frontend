@@ -12,7 +12,7 @@ function Products() {
 
  const handleAddToCart = async (product) => {
   try {
-    const response = await api.post("/api/cart", {
+    const response = await api.post("/cart", {
       productId: product._id,
       quantity: 1,
     });
@@ -27,7 +27,7 @@ function Products() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await api.get("/api/products");
+        const response = await api.get("/products");
         setProducts(response.data);
       } catch (error) {
         console.log(error);
@@ -47,7 +47,7 @@ function Products() {
 
   try {
 
-    const response = await api.delete(`/api/products/${id}`);
+    const response = await api.delete(`/products/${id}`);
 
     alert(response.data.message);
 

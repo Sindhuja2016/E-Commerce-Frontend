@@ -18,7 +18,7 @@ useEffect(() => {
 
   const fetchProducts = async () => {
     try {
-      const response = await api.get("/api/products");
+      const response = await api.get("/products");
       setProducts(response.data);
     } catch (error) {
       console.log(error);
@@ -27,7 +27,7 @@ useEffect(() => {
 
   const fetchOrders = async () => {
     try {
-      const response = await api.get("/api/orders/myorders");
+      const response = await api.get("/orders/myorders");
       console.log(JSON.stringify(response.data, null, 2));
       setOrders(response.data.orders);
     } catch (error) {
@@ -37,7 +37,7 @@ useEffect(() => {
 
   const fetchUsers = async () => {
    try {
-    const response = await api.get("/api/users");
+    const response = await api.get("/users");
     console.log("Users Count:", response.data); 
     setUsers(response.data);
     } catch (error) {

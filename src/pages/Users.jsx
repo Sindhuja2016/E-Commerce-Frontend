@@ -14,7 +14,7 @@ function Users() {
 
     const fetchUsers = async () => {
         try {
-            const response = await api.get("/api/users");
+            const response = await api.get("/users");
 
             setUsers(response.data); // <-- because your backend returns an array
 
