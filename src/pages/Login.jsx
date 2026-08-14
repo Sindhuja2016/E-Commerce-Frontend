@@ -68,7 +68,6 @@ function Login() {
 
         </form>
 
-        {/* Register link */}
         <p className="text-center mt-4">
           Don't have an account?{" "}
           <Link
